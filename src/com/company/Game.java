@@ -61,7 +61,11 @@ public class Game {
             System.out.println("Dealer's hand is:");
             System.out.println(dealersHand);
         }
-        System.out.println("Dealer stays.");
+        if(dealersHand.scoreHand() > 21){
+			System.out.println("Dealer busts!");
+		}else{
+			System.out.println("Dealer stays.");
+		}
     }
 
     private void prepareRound() {
